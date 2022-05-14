@@ -13,15 +13,15 @@
 	templatedir = ~/.git_template
 [alias]
 	ctags = !.git/hooks/ctags
-  pu    = !"git fetch origin -v; git fetch upstream -v; git merge --ff upstream/master"
-  welp  = reset --soft HEAD~1
-  workprofile = config user.email \"akamlani@beyond.ai\"
+	pu    = !"git fetch origin -v; git fetch upstream -v; git merge --ff upstream/master"
+	welp  = reset --soft HEAD~1
+	workprofile = config user.email \"akamlani@beyond.ai\"
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
-  renamelimit = 2424
+	renamelimit   = 2424
 [mergetool]
 	keepBackup = false
 [diff]
-  tool = vimdiff
+	tool = vimdiff
 	conflictstyle = diff3

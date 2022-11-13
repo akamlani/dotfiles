@@ -14,20 +14,20 @@ help:
 	@echo "  oh-my-zsh to make a single large HTML file"
 
 cleanvim:
-  -rm -rf $(BUILDDIR).vimrc
-  -rm -rf $(BUILDDIR).vim
+	-rm -rf $(BUILDDIR).vimrc
+	-rm -rf $(BUILDDIR).vim
 
 cleanzsh:
-  -rm -rf $(BUILDDIR).zsh
+	-rm -rf $(BUILDDIR).zsh
 
 cleandotfiles:
-  -rm -rf $(BUILDDIR)dotfiles
+	-rm -rf $(BUILDDIR)dotfiles
 
 dotfiles:
-  ln -sf $(BUILDDIR)dotfiles/.vimrc    $(BUILDDIR).vimrc
-  ln -sf $(BUILDDIR)dotfiles/.zshrc    $(BUILDDIR).zshrc
-  ln -sf $(BUILDDIR)dotfiles/.inputrc  $(BUILDDIR).inputrc
-  mkdir -p $(BUILDDIR).zsh
+	ln -sf $(BUILDDIR)dotfiles/.vimrc    $(BUILDDIR).vimrc
+	ln -sf $(BUILDDIR)dotfiles/.zshrc    $(BUILDDIR).zshrc
+	ln -sf $(BUILDDIR)dotfiles/.inputrc  $(BUILDDIR).inputrc
+	mkdir -p $(BUILDDIR).zsh
 
 zsh:
 	@echo "Installing ZSH plugins"

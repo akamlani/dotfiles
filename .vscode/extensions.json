@@ -1,1 +1,35 @@
-
+{
+    "recommendations": [
+        //core python
+        "ms-python.python", // Python extension
+        "njpwerner.autodocstring", // Python Docstring Generator (autoDocstring)
+        //copilot
+        "github.copilot", // GitHub Copilot for AI-assisted coding
+        "github.copilot-chat", // GitHub Copilot Chat
+        //vendor specific copilot tools
+        "anthropic.claude-code", // Anthropic Claude Code
+        "google.gemini-cli-vscode-ide-companion", // Gemini CLI VSCode IDE Companion
+        //diagramming
+        "hediet.vscode-drawio", // Draw.io Integration
+        "pomdtr.excalidraw-editor", // Excalidraw Editor
+        //editing
+        "esbenp.prettier-vscode",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff", // Ruff LSP for Python
+        // documents and languages
+        "dotenv.dotenv-vscode", // Dotenv support
+        "ms-toolsai.jupyter", // Jupyter extension
+        "ms-vscode.makefile-tools", // Makefile Tools
+        "ms-azuretools.vscode-docker", // Docker extension
+        "tamasfe.even-better-toml", // TOML Language Support
+        "wholroyd.jinja", // Jinja
+        "redhat.vscode-yaml", // YAML Language Server Support
+        "bierner.markdown-preview-github-styles", // Markdown Preview GitHub Styles
+        "shd101wyy.markdown-preview-enhanced", // Markdown Preview Enhanced
+        "lextudio.restructuredtext", // reStructuredText Language Support
+        "trond-snekvik.simple-rst", // Simple reStructuredText Highlighting
+        "mechatroner.rainbow-csv", // Rainbow CSV
+        // git
+        "mhutchie.git-graph",
+    ]
+}

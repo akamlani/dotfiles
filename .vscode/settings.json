@@ -1,57 +1,77 @@
 {
-    // Configure editor settings to be overridden for [python] language.
+    //workbench settings
+    "workbench.preferredDarkColorTheme": "Default Light Modern",
+    "workbench.editor.showTabs": "multiple",
+    "workbench.editor.wrapTabs": true,
+    //Intellisense
+    "python.languageServer":                    "Pylance",
+    //linting and formatting
+    "python.linting.enabled":                   true,
+    "python.autoComplete.addBrackets":          true,
+    "python.autoComplete.extraPaths":           [
+        //add paths to directories containing python libraries or packages
+    ],
     "[python]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
         "editor.codeActionsOnSave": {
             "source.fixAll": "explicit"
         }
     },
-    // Configure editor settings to be overridden for [yaml] language.
+    //"python.analysis.diagnosticMode":         "workspace",    // "workspace" | "openFilesOnly"
+    "python.analysis.typeCheckingMode":         "off",          // "off" | "basic" | "standard" | "strict"
+    "python.analysis.autoImportCompletions":    false,
+    "python.analysis.autoIndent":               true,
+    "python.analysis.useLibraryCodeForTypes":   true,
+    "python.analysis.autoSearchPaths":          true,
+    "python.analysis.aiCodeActions": {
+        "enabled": true,
+        "implementAbstractClasses": true
+    },
+    // [yaml] language.
     "[yaml]": {
         "editor.tabSize": 2,
-        "editor.detectIndentation": false
+        "editor.detectIndentation": true,
+        "editor.insertSpaces":      true
     },
+    // json settings
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    //documentation
+    "autoDocstring.docstringFormat": "google",
+    //Python Env Settings
+    //"python.pythonPath":                  ${workspaceFolder}/.venv/bin/python",
+    "python-envs.defaultEnvManager":        "ms-python.python:venv",
+    "python-envs.defaultPackageManager":    "ms-python.python:pip",
+    "python.defaultInterpreterPath": "      ${workspaceFolder}/.venv/bin/python",
+    "python.terminal.activateEnvironment":  true,
+    "python-envs.pythonProjects":           [],
 
-    "python.pythonPath": "/opt/anaconda3/envs/anthem_v3.10/bin/python",
-    //Pylance
-    "python.languageServer": "Pylance",
-    //"python.analysis.typeCheckingMode": "basic",
-    "python.analysis.autoSearchPaths": true,
-    "python.analysis.useLibraryCodeForTypes": true,
-    "python.analysis.extraPaths": [
-        //add paths to directories containing python libraries or packages
-        "/opt/anaconda3/envs/anthem_v3.10/lib/python3.10/site-packages"
-    ],
-    //IntelliCode
-    //Intellisense
-    "python.autoComplete.addBrackets": true,
-    "python.autoComplete.extraPaths": [
-        //add paths to directories containing python libraries or packages
-    ],
-
+    //general settings
+    "terminal.integrated.inheritEnv":   true,
+    //makefile settings
+    "makefile.configureOnOpen": false,
+    //linting and formatting
     "prettier.enable": true,
-    "python.terminal.activateEnvironment": true,
-    "terminal.integrated.inheritEnv": true,
-    //editing
+    //editor
     "editor.tabCompletion": "on",
     "editor.formatOnType": true,
-    //"editor.formatOnSave": true,
     "editor.formatOnPaste": true,
-    "files.insertFinalNewline": false,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    //row tabs
-    "workbench.editor.wrapTabs": true,
-
-    //linting and formatting
-    "python.linting.enabled": true,
-    "autoDocstring.docstringFormat": "google",
-
-
-    "esbonio.sphinx.confDir": "",
+    "editor.formatOnSave": false,
+    //files
     "files.exclude": {
         "**/.git": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true
     },
+    "files.insertFinalNewline":     false,
+    "files.trimFinalNewlines":      true,
+    "files.trimTrailingWhitespace": true,
+
+
+
+
+
+
+
 }

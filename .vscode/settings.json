@@ -67,11 +67,6 @@
     "files.insertFinalNewline":     false,
     "files.trimFinalNewlines":      true,
     "files.trimTrailingWhitespace": true,
-
-
-
-
-
-
-
+    //server settings
+    "liveServer.settings.port":     5501
 }

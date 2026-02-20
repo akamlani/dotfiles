@@ -19,7 +19,7 @@ endif
 #################### Makefile Context
 .DEFAULT_GOAL := info
 
-.PHONY: help info reader reader_platform
+.PHONY: help info reader
 help:
 	@echo "Commands  : "
 	@echo "download  : downloads a new anaconda distribution"
@@ -46,26 +46,33 @@ reader:
 
 
 #################### AI Coding Assistant Integrations
-.PHONY: github_copilot_install anthropic_claude_install google_gemini_install
+.PHONY: setup_install github_copilot_install anthropic_claude_install google_gemini_install
+
+setup_install:
+	@echo "Creating Scaffolding..."
+	mkdir -p .claude .cursor .gemini .github
+
 github_copilot_install:
 # install in ~/.local/bin/copilot
 	@echo "Installing GitHub Copilot CLI..."
 	wget -qO- https://gh.io/copilot-install | zsh
+	mkdir -p .github
 
 openai_codex_install:
 	@echo "Installing OpenAI CLI..."
+	mkdir -p .codex
 	touch AGENTS.md
 
 anthropic_claude_install:
 	@echo "Installing Claude CLI..."
-	mkdir -p ./claude/{agents,skills,commands,rules}
+	mkdir -p .claude/{agents,skills,commands,rules}
 	touch ./CLAUDE.md
 	npm install -g @anthropic/claude-cli@latest
 
 google_gemini_install:
 	@echo "Installing Gemini CLI..."
 	touch GEMINI.md
-	npm install
+	mkdir -p .gemini
 	npm install -g npm@11.8.0
 	npm install -g @google/gemini-cli@latest
 

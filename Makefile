@@ -42,7 +42,18 @@ reader:
 	@echo "Env Dep Path:   ${ENV_DEP_PATH}"
 
 
-#################### Python Setup
+#################### Dotfiles 
+.PHONY: install_dotfiles link_dotfiles
+install_dotfiles:
+	@echo "Installing Dotfiles from $(DOTFILES_REPO)..."
+	@if [ ! -d $(DOTFILES_DIR) ]; then \
+		git clone $(DOTFILES_REPO) $(DOTFILES_DIR) && $(MAKE) link_dotfiles; \
+	fi
+
+link_dotfiles:
+	@echo "Linking Dotfiles..."
+	ln -sf $(DOTFILES_DIR)/.vscode ../../.vscode
+	ln -sf $(DOTFILES_DIR)/.github ../../.github
 
 
 #################### AI Coding Assistant Integrations

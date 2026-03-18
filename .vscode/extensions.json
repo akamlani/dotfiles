@@ -7,9 +7,11 @@
         "github.copilot", // GitHub Copilot for AI-assisted coding
         "github.copilot-chat", // GitHub Copilot Chat
         //vendor specific copilot tools
+        "openai.chatgpt",        // OpenAI Codex Extension
         "anthropic.claude-code", // Anthropic Claude Code
         "google.gemini-cli-vscode-ide-companion", // Gemini CLI VSCode IDE Companion
         //diagramming
+        "mermaidchart.vscode-mermaid-chart", // Mermaid Diagramming
         "hediet.vscode-drawio", // Draw.io Integration
         "pomdtr.excalidraw-editor", // Excalidraw Editor
         //editing

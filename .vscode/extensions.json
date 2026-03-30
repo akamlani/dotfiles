@@ -3,8 +3,8 @@
         //core python
         "ms-python.python", // Python extension
         "njpwerner.autodocstring", // Python Docstring Generator (autoDocstring)
-        //copilot
-        "github.copilot", // GitHub Copilot for AI-assisted coding
+        //github
+        "github.vscode-github-actions", // GitHub Actions support
         "github.copilot-chat", // GitHub Copilot Chat
         //vendor specific copilot tools
         "openai.chatgpt",        // OpenAI Codex Extension

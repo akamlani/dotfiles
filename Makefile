@@ -47,8 +47,9 @@ reader:
 install_dotfiles:
 	@echo "Installing Dotfiles from $(DOTFILES_REPO)..."
 	@if [ ! -d $(DOTFILES_DIR) ]; then \
-		git clone $(DOTFILES_REPO) $(DOTFILES_DIR) && $(MAKE) link_dotfiles; \
+		git clone $(DOTFILES_REPO) $(DOTFILES_DIR); \
 	fi
+	$(MAKE) link_dotfiles
 
 link_dotfiles:
 	@echo "Linking Dotfiles..."
